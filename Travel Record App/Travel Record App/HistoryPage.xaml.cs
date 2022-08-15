@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Travel_Record_App
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class History : ContentPage
+    public partial class HistoryPage : ContentPage
     {
-        public History()
+        public HistoryPage()
         {
             InitializeComponent();
         }
