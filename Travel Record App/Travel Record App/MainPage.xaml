@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Travel_Record_App.MainPage">
+
+    <StackLayout Margin="15"
+                 VerticalOptions="Center">
+        <Entry Keyboard="Email" Placeholder="Email"/>
+        <Entry IsPassword="True" Placeholder="Password"/>
+        <Button x:Name="btnLogin" Text="Login"
+                BackgroundColor="#3f84e5"
+                TextColor="White"
+                Clicked="btnLogin_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
