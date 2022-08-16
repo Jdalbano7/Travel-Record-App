@@ -25,15 +25,16 @@ namespace Travel_Record_App
                 Experience = experienceEntry.Text
             };
 
-            SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation);
-            connection.CreateTable<Post>();
-            int rows = connection.Insert(post);
-            connection.Close();
+            using (SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation))//using statement for IDisposable
+            {
+                connection.CreateTable<Post>();
+                int rows = connection.Insert(post);
 
-            if (rows > 0)
-                DisplayAlert("Successful post", "Your experience was successfully posted.", "Great!");
-            else
-                DisplayAlert("Unsuccessful post", "Your experience was not posted", "Okay");
+                if (rows > 0)
+                    DisplayAlert("Successful post", "Your experience was successfully posted.", "Great!");
+                else
+                    DisplayAlert("Unsuccessful post", "Your experience was not posted", "Okay");
+            }
         }
     }
 }
