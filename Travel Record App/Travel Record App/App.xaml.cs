@@ -14,13 +14,13 @@ namespace Travel_Record_App
             MainPage = new NavigationPage(new MainPage());
         }
 
-        public App(string dataBaseLocation)
+        public App(string databaseLocation)
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
             
-            DatabaseLocation = dataBaseLocation;
+            DatabaseLocation = databaseLocation;
         }
 
         protected override void OnStart()
