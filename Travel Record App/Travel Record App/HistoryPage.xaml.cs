@@ -26,6 +26,7 @@ namespace Travel_Record_App
             {
                 connection.CreateTable<Post>();
                 var posts = connection.Table<Post>().ToList();
+                postListView.ItemsSource = posts;
             }
 
         }
